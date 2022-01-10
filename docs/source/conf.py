@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Map Tiles For Bluesky'
-copyright = '2021, Graziella'
+# copyright = '2021, Graziella'
 author = 'Andres Morfin Veytia'
 
 
