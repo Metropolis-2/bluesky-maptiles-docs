@@ -2,12 +2,10 @@
 
 # -- Project information
 
-project = 'Lumache'
+project = 'Map Tiles For Bluesky'
 copyright = '2021, Graziella'
-author = 'Graziella'
+author = 'Andres Morfin Veytia'
 
-release = '0.1'
-version = '0.1.0'
 
 # -- General configuration
 
