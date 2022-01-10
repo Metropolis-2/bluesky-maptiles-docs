@@ -1,9 +1,10 @@
-Template for the Read the Docs tutorial
+Map tiles for BlueSky
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+This tutorial will explain how to:
 
-Read the tutorial here:
+(1) create custom map tiles
+(2) create a tile server
+(3) serve the tiles to BlueSky
 
-https://docs.readthedocs.io/en/stable/tutorial/
+With other open source tools (openmaptiles, maputnik, tileserver-gl, and QGIS)
