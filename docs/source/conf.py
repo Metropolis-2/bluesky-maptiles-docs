@@ -33,4 +33,4 @@ html_theme = 'sphinx_rtd_theme'
 epub_show_urls = 'footnote'
 
 # add the 3d view extra path
-html_extra_path = ['3d_view/index.html']
+html_extra_path = ['../3d_view']
