@@ -15,7 +15,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'sphinx-jsonschema',
+    # 'sphinxcontrib.osexample',
 ]
 
 intersphinx_mapping = {

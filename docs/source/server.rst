@@ -62,54 +62,35 @@ This returns a slightly longer output with the :code:`config.json` file.
 
 The :code:`config.json` file is seen below,
 
-.. .. code-block:: json
-..   {
-..     "options": {
-..       "paths": {
-..         "root": "",
-..         "fonts": "fonts",
-..         "sprites": "sprites",
-..         "styles": "styles",
-..         "mbtiles": ""
-..       },
-..       "domains": [
-..         "localhost:8080",
-..         "127.0.0.1:8080"
-..       ],
-..       "formatQuality": {
-..         "jpeg": 80,
-..         "webp": 90
-..       },
-..       "maxScaleFactor": 3,
-..       "maxSize": 2048,
-..       "pbfAlias": "pbf",
-..       "serveAllFonts": false,
-..       "serveAllStyles": false,
-..       "serveStaticMaps": true,
-..       "tileMargin": 0
-..     },
-..     "styles": {
-..       "basic": {
-..         "style": "basic.json",
-..         "tilejson": {
-..           "type": "overlay",
-..           "bounds": [8.44806, 47.32023, 8.62537, 47.43468]
+.. .. code-block:: JSON
+..     {
+..         "options": {
+..         "paths": {
+..             "root": "/app/node_modules/tileserver-gl-styles",
+..             "fonts": "fonts",
+..             "styles": "styles",
+..             "mbtiles": "/data"
 ..         }
-..       },
-..       "hybrid": {
-..         "style": "satellite-hybrid.json",
-..         "serve_rendered": false,
-..         "tilejson": {
-..           "format": "webp"
+..         },
+..         "styles": {
+..         "basic-preview": {
+..             "style": "basic-preview/style.json",
+..             "tilejson": {
+..             "bounds": [
+..                 8.275,
+..                 47.225,
+..                 8.8,
+..                 47.533
+..             ]
+..             }
 ..         }
-..       }
-..     },
-..     "data": {
-..       "zurich-vector": {
-..         "mbtiles": "zurich.mbtiles"
-..       }
+..         },
+..         "data": {
+..         "v3": {
+..             "mbtiles": "zurich_switzerland.mbtiles"
+..         }
+..         }
 ..     }
-..   }
 
 
 Here it is clear
