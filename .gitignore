@@ -6,3 +6,5 @@ docs/build
 # vscode
 .vscode/
 .DS_Store
+*.gpkg-shm
+*.gpkg-wal
