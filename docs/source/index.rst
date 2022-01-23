@@ -31,3 +31,4 @@ Contents
 .. toctree::
 
   tiles
+  server

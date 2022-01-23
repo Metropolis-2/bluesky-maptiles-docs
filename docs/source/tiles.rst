@@ -20,9 +20,9 @@ The geofence locations were chosen with OSM at cemetaries, parks, and other gree
 
 Finally, the airspace border was selected to be an 8 km radius circle centered in the middle of Vienna.
 
-Note that each dataset may contain information about each individual item. In Metropolis-2 we may be
-interested in seeing which buildings or geofences are intruded by aircraft in the simulation. Therefore 
-we may want to show that infomration in bluesky. The geofence and building data is structured as follows:
+Note that each dataset may contain information about each individual item. In Metropolis-2 we are
+interested in seeing which buildings or geofences are intruded by aircraft. Therefore 
+we may want to show that information in BlueSky. The geofence and building data is structured as follows:
 
 .. list-table:: Geofence and Building data structure
    :widths: 25 25 50
@@ -38,6 +38,7 @@ we may want to show that infomration in bluesky. The geofence and building data 
      - 500
      - Polygon
 
+The goal will be to show the :code:`fid` of the individual building when zoomed in.
 
 Creating the tiles with tippecanoe
 ----------------------------------
@@ -49,7 +50,7 @@ Therefore, we will use tippecanoe from mapbox to generate the tiles.
 
 The first step is to convert all datasets into `GeoJSON <https://geojson.org/>`_ format. 
 This can easily be done with QGIS. It is also important to set the coordinate reference system to EPSG:4326. 
-The four GeoJSON files are saved in the :code:`project_data` directory
+The four GeoJSON files are saved in the :code:`project_data` directory.
 
 The second step is to create the tiles with the :code:`tippecanoe` command. 
 The documentation shows the many different options of the command.
