@@ -62,36 +62,8 @@ This returns a slightly longer output with the :code:`config.json` file.
 
 The :code:`config.json` file is seen below,
 
-.. .. code-block:: JSON
-..     {
-..         "options": {
-..         "paths": {
-..             "root": "/app/node_modules/tileserver-gl-styles",
-..             "fonts": "fonts",
-..             "styles": "styles",
-..             "mbtiles": "/data"
-..         }
-..         },
-..         "styles": {
-..         "basic-preview": {
-..             "style": "basic-preview/style.json",
-..             "tilejson": {
-..             "bounds": [
-..                 8.275,
-..                 47.225,
-..                 8.8,
-..                 47.533
-..             ]
-..             }
-..         }
-..         },
-..         "data": {
-..         "v3": {
-..             "mbtiles": "zurich_switzerland.mbtiles"
-..         }
-..         }
-..     }
-
+.. literalinclude:: ../configs/default_config.json
+  :language: JSON
 
 Here it is clear
 
