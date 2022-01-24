@@ -20,6 +20,11 @@ The geofence locations were chosen with OSM at cemetaries, parks, and other gree
 
 Finally, the airspace border was selected to be an 8 km radius circle centered in the middle of Vienna.
 
+.. note::
+
+   Check out this cool 3d model of our `M2 simulation area <https://bluesky-maptiles-docs.readthedocs.io/en/latest/3dview.html>`_.
+   With maptiles by MapTiler and OpenStreetMap.
+
 Note that each dataset may contain information about each individual item. In Metropolis-2 we are
 interested in seeing which buildings or geofences are intruded by aircraft. Therefore 
 we may want to show that information in BlueSky. The geofence and building data is structured as follows:
