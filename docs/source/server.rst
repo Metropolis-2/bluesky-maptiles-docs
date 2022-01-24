@@ -60,12 +60,17 @@ This returns a slightly longer output with the :code:`config.json` file.
  .. image:: ../images/config.png
    :width: 900
 
-The :code:`config.json` file is seen below,
+The :code:`config.json` file is as follows.
 
 .. literalinclude:: ../configs/default_config.json
   :language: JSON
 
-Here it is clear
+There important parts of the config file are (1) **options**, (2) **styles**, (3) **data**.
+
+For this tutorial we will only work with the parts shown in the default :code:`config.json`. 
+Now that we have all the data the most difficult part is pretty much done. The trick now
+is to get the paths right inside **options**. In the current config, the root directory is somewhere inside our container.
+
 
 Creating a custom style with maputnik
 --------------------------------------
