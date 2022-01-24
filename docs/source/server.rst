@@ -69,8 +69,26 @@ There important parts of the config file are (1) **options**, (2) **styles**, (3
 
 For this tutorial we will only work with the parts shown in the default :code:`config.json`. 
 Now that we have all the data the most difficult part is pretty much done. The trick now
-is to get the paths right inside **options**. In the current config, the root directory is somewhere inside our container.
+is to get the paths right inside **options**. In the current config, the root directory is somewhere inside our docker shell.
 
+If we open a new terminal and enter the docker shell, we can navigate to the root directory.
+
+ .. image:: ../images/docker_root.png
+   :width: 900
+
+The other paths (:code:`fonts`, :code:`styles`, and :code:`mbtiles`) are dependent on the :code:`root` path. 
+For example to navigate to :code:`fonts` we would have to visit :code:`/app/node_modules/tileserver-gl-styles/fonts` 
+You can see this directory in the image above. It is the sames for :code:`styles`. However, if you take a look at the image above
+you won't find the :code:`mbtiles` path because the path starts with a forward slash (:code:`/`). In this case it means that we
+need to look inside the :code:`/data/` directory of the docker shell.
+
+ .. image:: ../images/docker_root_data.png
+   :width: 900
+
+This :code:`data` directory inside the docker shell is actually just a copy of :code:`openmaptiles/data`.
+
+In the future this is where we will place our vector tiles, style schema, and fonts 
+(you can also put some sprites there but we will not be doing that in this tutorial).
 
 Creating a custom style with maputnik
 --------------------------------------
