@@ -107,6 +107,8 @@ repository and either:
 Since we are attempting to do everyhting locally, we will package the fonts following 
 these `instructions <https://github.com/openmaptiles/fonts#package-the-fonts>`_.
 
+See TileServer GL documentation for more information.
+
 About styles
 *****************
 
@@ -127,9 +129,34 @@ Under :code:`sources` you can see that the OpenMapTiles vector tiles are linked 
 Looking at the :code:`config.json` above we can see that those are the :code:`zurich_switzerland.mbtiles`.
 
 The :code:`glyphs` path is set to :code:`{fontstack}/{range}.pbf` which means that the font will depend on whatever
-the layer uses. The basic preview style only uses the :code:`Noto Sans Regular` font which comes packacged with
+the layer (more on this later) uses. The basic preview style only uses the :code:`Noto Sans Regular` font which comes packacged with
 OpenMapTiles.
 
+.. note::
+
+   `OpenMapTiles <https://openmaptiles.org/styles/>`_ provides several open source styles that are a good starting point for beginners.
+
+About sprites
+*****************
+The Metropolis-2 tiles will not be using sprites but it is worth briefly mentioning them.
+
+The `dark matter style <https://github.com/openmaptiles/dark-matter-gl-style/blob/master/style.json>`_ provides an example
+path to sprites.
+
+.. code-block::
+
+   "sprite": "https://openmaptiles.github.io/dark-matter-gl-style/sprite"
+
+When a style contains a reference to a sprite it will try to look in this path. The documentation for sprites says
+that the following files be present, :code:`sprite.json`, :code:`sprite.png`, :code:`sprite@2x.json`, :code:`sprite@2x.json`.
+If you add these file extensions to the sprite path of the dark matter style you can see how they look.
+
+* `<https://openmaptiles.github.io/dark-matter-gl-style/sprite.json>`_
+* `<https://openmaptiles.github.io/dark-matter-gl-style/sprite.png>`_
+* `<https://openmaptiles.github.io/dark-matter-gl-style/sprite@2x.json>`_
+* `<https://openmaptiles.github.io/dark-matter-gl-style/sprite@2x.png>`_
+
+As always you can also reference them locally.
 
 Creating a custom style with maputnik
 --------------------------------------
