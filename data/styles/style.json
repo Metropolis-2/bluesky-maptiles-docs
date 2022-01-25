@@ -1,0 +1,169 @@
+{
+  "version": 8,
+  "name": "m2",
+  "sources": {
+    "m2": {
+      "type": "vector",
+      "url": "mbtiles://{v3}"
+    }
+  },
+  "glyphs": "{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "rgba(92, 92, 92, 1)"
+      }
+    },
+    {
+      "id": "highway_major_casing",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"
+      },
+      "source": "m2",
+      "source-layer": "streets",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "miter",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(60,60,60,0.8)",
+        "line-dasharray": [
+          12,
+          0
+        ],
+        "line-width": {
+          "base": 1.3,
+          "stops": [
+            [
+              10,
+              3
+            ],
+            [
+              20,
+              23
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway_major_inner",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"
+      },
+      "source": "m2",
+      "source-layer": "streets",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "hsl(0, 0%, 7%)",
+        "line-width": {
+          "base": 1.3,
+          "stops": [
+            [
+              10,
+              2
+            ],
+            [
+              20,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "airspace_border",
+      "type": "line",
+      "source": "m2",
+      "source-layer": "airspace_border",
+      "paint": {
+        "line-color": "rgba(0, 0, 0, 1)",
+        "line-width": 2
+      }
+    },
+    {
+      "id": "building",
+      "type": "fill",
+      "source": "m2",
+      "source-layer": "buildings",
+      "minzoom": 15,
+      "paint": {
+        "fill-color": "rgba(59, 59, 59, 1)",
+        "fill-outline-color": "rgba(0, 0, 0, 1)",
+        "fill-translate-anchor": "map"
+      }
+    },
+    {
+      "id": "building_name",
+      "type": "symbol",
+      "source": "m2",
+      "source-layer": "buildings",
+      "minzoom": 15,
+      "layout": {
+        "text-field": "{fid}",
+        "symbol-placement": "point",
+        "symbol-z-order": "auto",
+        "text-size": 12
+      },
+      "paint": {
+        "text-color": "rgba(0, 0, 0, 1)"
+      }
+    },
+    {
+      "id": "geofence",
+      "type": "fill",
+      "source": "m2",
+      "source-layer": "geofences",
+      "minzoom": 8,
+      "paint": {
+        "fill-color": "rgba(59, 59, 59, 1)",
+        "fill-outline-color": "rgba(0, 0, 0, 1)",
+        "fill-translate-anchor": "map"
+      }
+    },
+    {
+      "id": "geofence_name",
+      "type": "symbol",
+      "source": "m2",
+      "source-layer": "geofences",
+      "minzoom": 15,
+      "layout": {
+        "text-field": "{id}",
+        "symbol-placement": "point",
+        "symbol-z-order": "auto",
+        "text-size": 12
+      },
+      "paint": {
+        "text-color": "rgba(0, 0, 0, 1)"
+      }
+    }
+  ],
+  "id": "m2"
+}
