@@ -389,3 +389,13 @@ This final config file looks like this,
 .. literalinclude:: ../configs/config.json
   :language: JSON
 
+Serve the final tiles
+**************************************
+
+After modifying the schema we can restart the tile server by running :code:`make start-tileserver`
+from :code:`openmaptiles`.
+
+And if we go to the viewer we can see our scrollable Metropolis-2 map!
+
+.. image:: ../images/final_tiles.png
+   :width: 900
