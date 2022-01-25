@@ -90,6 +90,47 @@ This :code:`data` directory inside the docker shell is actually just a copy of :
 In the future this is where we will place our vector tiles, style schema, and fonts 
 (you can also put some sprites there but we will not be doing that in this tutorial).
 
+About fonts
+*****************
+
+If you visit the :code:`/app/node_modules/tileserver-gl-styles/fonts` directory in the docker shell you 
+will see a :code:`Noto Sans Regular` font directory with a bunch of :code:`pbf` files.
+These are the default fonts of the server. If a custom style references a non existent font,
+the server will use the default font. For most of my cases, the default is fine.
+
+However, to use other fonts we can look at at the OpenMapTiles `font <https://github.com/openmaptiles/fonts>`_ 
+repository and either:
+
+* package the fonts.
+* set :code:`"glyphs": "http://fonts.openmaptiles.org/{fontstack}/{range}.pbf"` in the style schema.
+  
+Since we are attempting to do everyhting locally, we will package the fonts following 
+these `instructions <https://github.com/openmaptiles/fonts#package-the-fonts>`_.
+
+About styles
+*****************
+
+If we look again at the :code:`config.json` file we see the :code:`basic-preview` style located at
+:code:`/app/node_modules/tileserver-gl-styles/styles/basic-preview/style.json`. It also
+has some information about the bounding box of the tiles (not required but nice).
+
+The :code:`style.json` is almost a complete copy of of `this <https://github.com/openmaptiles/maptiler-basic-gl-style/blob/master/style.json>`_.
+The only difference are the paths to the vector tiles and glyphs. The online version is linking to
+the MapTiler server, while the one in the docker shell is linking to a local path. You can actually
+use any path (local or remote), however some paths may require an api key (mapbox or MapTiler).
+Below you can see just the top of the :code:`style.json` file in the docker shell.
+
+.. literalinclude:: ../configs/basic.json
+  :language: JSON
+
+Under :code:`sources` you can see that the OpenMapTiles vector tiles are linked to the local tiles :code:`v3`.
+Looking at the :code:`config.json` above we can see that those are the :code:`zurich_switzerland.mbtiles`.
+
+The :code:`glyphs` path is set to :code:`{fontstack}/{range}.pbf` which means that the font will depend on whatever
+the layer uses. The basic preview style only uses the :code:`Noto Sans Regular` font which comes packacged with
+OpenMapTiles.
+
+
 Creating a custom style with maputnik
 --------------------------------------
 

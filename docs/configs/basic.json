@@ -1,0 +1,14 @@
+{
+  "version":8,
+  "name":"Basic preview",
+  "metadata":{
+    "openmaptiles:version":"3.x"
+  },
+  "sources":{
+    "openmaptiles":{
+      "type":"vector",
+      "url":"mbtiles://{v3}"
+    }
+  },
+  "glyphs":"{fontstack}/{range}.pbf"
+}
