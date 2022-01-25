@@ -1,0 +1,28 @@
+{
+    "options": {
+      "paths": {
+        "root": "",
+        "fonts": "fonts",
+        "styles": "styles",
+        "mbtiles": ""
+      }
+    },
+    "styles": {
+      "m2": {
+        "style": "style.json",
+        "tilejson": {
+          "bounds": [
+            16.254755,
+            48.133106,
+            16.469847,
+            48.276893
+          ]
+        }
+      }
+    },
+    "data": {
+      "v3": {
+        "mbtiles": "m2.mbtiles"
+      }
+    }
+  }
