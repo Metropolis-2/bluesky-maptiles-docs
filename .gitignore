@@ -4,6 +4,7 @@ docs/build
 
 # data
 data/*
+m2/*
 
 # vscode
 .vscode/
