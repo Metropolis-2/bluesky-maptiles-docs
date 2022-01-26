@@ -5,8 +5,10 @@ This is a tutorial that will explain how to:
 
 #. create custom map tiles.
 #. create a tile server.
+#. create a custom style with custom tiles.
 #. serve the tiles to `BlueSky <https://github.com/TUDelft-CNS-ATM/bluesky/>`_.
 
+We will make the map tiles that are used for the `Metropolis-2 <https://metropolis2.eu/>`_ simulations.
 
 .. note::
 
@@ -32,3 +34,5 @@ Contents
 
   tiles
   server
+  style
+  bluesky

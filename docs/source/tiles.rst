@@ -1,4 +1,4 @@
-Custom tiles
+Creating custom tiles
 ===================================
 
 The goal of this section will be to show how to create an :code:`mbtiles` file from Metropolis-2 Data.
