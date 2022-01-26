@@ -31,8 +31,9 @@ Contents
 --------
 
 .. toctree::
-
-  tiles
-  server
-  style
-  bluesky
+   :maxdepth: 2
+   
+   tiles
+   server
+   style
+   bluesky
