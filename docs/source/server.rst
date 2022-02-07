@@ -111,6 +111,12 @@ these `instructions <https://github.com/openmaptiles/fonts#package-the-fonts>`_.
 
 See TileServer GL documentation for more information.
 
+.. note::
+
+   You are not only limited to the OpenMapTiles fonts. An easy way to create a font is to make a new directory
+   in the root of OpenMapTiles fonts and place a :code:`ttf` or :code:`otf` file in there. The OpenMapTiles script
+   will automatically generate the necessary :code:`pbf` files. Just make sure to check licensing. 
+
 About styles
 *****************
 
